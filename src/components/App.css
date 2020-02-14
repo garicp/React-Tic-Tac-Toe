@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.header {
+  background-color: #ececec;
+  padding: 15px 50px;
+}
+
+.game-container {
+  width: 260px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box-container {
+  width: 100%;
+  height: 260px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+button {
+  border: none;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.button-reset {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  border: 2px solid black;
+  border-radius: 5px;
+  background: white;
+}
+
+.button-reset:hover {
+  color: red;
+  border: 2px solid red;
+  border-radius: 5px;
+  background: white;
+}
+
+.button-reset:active {
+  color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  background: white;
+}
+
+.button-box {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+/* .button-value {
+  font-size: 60px;
+  color: white;
+} */
+
+.gray {
+  background-color: #ececec;
+}
+
+.icon {
+  width: auto;
+  height: 70px;
+  transform: translateY(3px);
+}
+
+.darker {
+  width: auto;
+  height: 70px;
+  transform: translateY(3px);
+  filter: brightness(50%);
+}
+
+.icon-animation {
+  width: auto;
+  height: 70px;
+  transform: translateY(3px);
+  animation: animate-icon 1s infinite;
+}
+
+@keyframes animate-icon {
+  0% {
+    transform: translateY(3px) scale(1);
+  }
+  25% {
+    transform: translateY(3px) scale(0.9);
+  }
+  50% {
+    transform: translateY(3px) scale(1.3);
+  }
+  75% {
+    transform: translateY(3px) scale(0.9);
+  }
+  100% {
+    transform: translateY(3px) scale(1);
+  }
+}
+
+.message {
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.credit {
+  font-size: 12px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
