@@ -1,3 +1,8 @@
+import React from "react";
+
+import { ReactComponent as XIcon } from "../assets/devil.svg";
+import { ReactComponent as OIcon } from "../assets/dionysus.svg";
+
 const createBoxObject = num => {
   let newObject = [];
 
@@ -13,6 +18,36 @@ const createBoxObject = num => {
   }
 
   return newObject;
+};
+
+const player1Object = {
+  id: "p1",
+  icon: <OIcon className="icon" />,
+  iconSmall: <OIcon className="icon-small" />,
+  iconSmallDarker: <OIcon className="icon-small darker" />,
+  iconAnimation: <OIcon className="icon icon-animation" />,
+  iconDarker: <OIcon className="icon darker" />,
+  iconBackgroundLeft: <OIcon className="icon-god-big-left" />,
+  iconBackgroundRight: <XIcon className="icon-devil-big-right" />,
+  message: "Devil next!",
+  winningMessage: "Still believe in God!",
+  winnerColor: "rgba(0,191,158,.4)",
+  loserColor: "rgba(0, 0, 0, .3)"
+};
+
+const player2Object = {
+  id: "p2",
+  icon: <XIcon className="icon" />,
+  iconSmall: <XIcon className="icon-small" />,
+  iconSmallDarker: <XIcon className="icon-small darker" />,
+  iconAnimation: <XIcon className="icon icon-animation" />,
+  iconDarker: <XIcon className="icon darker" />,
+  iconBackgroundLeft: <XIcon className="icon-devil-big-left" />,
+  iconBackgroundRight: <OIcon className="icon-god-big-right" />,
+  message: "God next!",
+  winningMessage: "Devil conquered!",
+  winnerColor: "rgba(255,161,172,.7)",
+  loserColor: "rgba(0, 0, 0, .3)"
 };
 
 const checkResultMethod = choice => {
@@ -70,4 +105,4 @@ const checkResultMethod = choice => {
   }
 };
 
-export { createBoxObject, checkResultMethod };
+export { createBoxObject, player1Object, player2Object, checkResultMethod };

@@ -7,9 +7,59 @@
   font-family: "Rajdhani", sans-serif;
 }
 
-.header {
+.background-container {
+  width: 100vw;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: -10;
+  overflow: hidden;
+}
+
+/* .icon-god-container,
+.icon-devil-container {
+  width: 50vw;
+  height: auto;
+  overflow: hidden;
+} */
+
+.icon-god-big-left,
+.icon-devil-big-left,
+.icon-god-big-right,
+.icon-devil-big-right {
+  width: auto;
+  height: 550px;
+  opacity: 0.07;
+}
+
+.icon-god-big-left,
+.icon-devil-big-left {
+  transform: rotate(90deg);
+  /* transform: rotate(90deg) scale(0.9) translate(50px, 80px); */
+}
+
+.icon-god-big-right,
+.icon-devil-big-right {
+  transform: rotate(-90deg);
+  /* transform: rotate(-90deg) scale(1.1, 1.15) translate(-150px, 210px); */
+}
+
+.header-container {
   background-color: #ececec;
-  padding: 15px 50px;
+  padding: 25px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .game-container {
@@ -38,31 +88,6 @@ button:focus {
   outline: 0;
 }
 
-.button-reset {
-  margin-top: 20px;
-  width: 100%;
-  padding: 10px;
-  font-size: 15px;
-  font-weight: 700;
-  border: 2px solid black;
-  border-radius: 5px;
-  background: white;
-}
-
-.button-reset:hover {
-  color: red;
-  border: 2px solid red;
-  border-radius: 5px;
-  background: white;
-}
-
-.button-reset:active {
-  color: black;
-  border: 2px solid black;
-  border-radius: 5px;
-  background: white;
-}
-
 .button-box {
   width: 80px;
   height: 80px;
@@ -87,16 +112,16 @@ button:focus {
 }
 
 .darker {
-  width: auto;
-  height: 70px;
-  transform: translateY(3px);
+  /* width: auto;
+  height: 70px; */
+  /* transform: translateY(3px); */
   filter: brightness(50%);
 }
 
 .icon-animation {
-  width: auto;
-  height: 70px;
-  transform: translateY(3px);
+  /* width: auto;
+  height: 70px; */
+  /* transform: translateY(3px); */
   animation: animate-icon 1s infinite;
 }
 
@@ -126,8 +151,56 @@ button:focus {
 }
 
 .credit {
-  font-size: 12px;
+  width: 100vw;
+  font-size: 14px;
+  padding: 25px 50px;
   position: absolute;
-  bottom: 10px;
-  right: 20px;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-container {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-reset {
+  width: 58%;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  border: 2px solid black;
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.player-god-devil {
+  width: 18%;
+  border: 2px solid black;
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.icon-small {
+  width: auto;
+  height: 30px;
+  transform: translateY(3px);
+}
+
+.button-reset:hover,
+.player-god-devil:hover {
+  color: red;
+  border: 2px solid red;
+}
+
+.button-reset:active,
+.player-god-devil:active {
+  color: black;
+  border: 2px solid black;
 }
