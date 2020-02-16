@@ -147,14 +147,14 @@ const App = () => {
       setPlayer1(player2Object);
       setPlayer2(player1Object);
     } else if (
-      message !== "God or Devil?" &&
+      message === "God or Devil?" &&
       player1.id !== player1Object.id &&
       player2.id !== player2Object.id &&
-      message === player1.measage &&
-      message === player2.message &&
-      message === player1.winningMessage &&
-      message === player2.winningMessage &&
-      message === "peace!!!"
+      message !== player1.measage &&
+      message !== player2.message &&
+      message !== player1.winningMessage &&
+      message !== player2.winningMessage &&
+      message !== "peace!!!"
     ) {
       setPlayer1(player1Object);
       setPlayer2(player2Object);
