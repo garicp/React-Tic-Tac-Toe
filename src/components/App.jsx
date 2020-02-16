@@ -9,7 +9,9 @@ import {
   player2Object,
   checkResultMethod
 } from "../functions/function";
+
 import "./App.css";
+import "./mediaQueries.css";
 
 const App = () => {
   const boxObject = createBoxObject(9);
@@ -92,7 +94,7 @@ const App = () => {
         }
       });
 
-      setMessage("peace!!!");
+      setMessage("Peace!!!");
       setGameDraw(true);
     }
   }, [
@@ -142,7 +144,7 @@ const App = () => {
       message !== player2.message &&
       message !== player1.winningMessage &&
       message !== player2.winningMessage &&
-      message !== "peace!!!"
+      message !== "Peace!!!"
     ) {
       setPlayer1(player2Object);
       setPlayer2(player1Object);
@@ -154,7 +156,7 @@ const App = () => {
       message !== player2.message &&
       message !== player1.winningMessage &&
       message !== player2.winningMessage &&
-      message !== "peace!!!"
+      message !== "Peace!!!"
     ) {
       setPlayer1(player1Object);
       setPlayer2(player2Object);
@@ -166,7 +168,7 @@ const App = () => {
     if (
       message === player1.winningMessage ||
       message === player2.winningMessage ||
-      message === "peace!!!"
+      message === "Peace!!!"
     ) {
       const newBoxObject = createBoxObject(9);
 
@@ -184,9 +186,11 @@ const App = () => {
   return (
     <div>
       <Header topicTitle="Tic-Tac-Toe" />
-      <div className="background-container">
-        {player1.iconBackgroundLeft}
-        {player1.iconBackgroundRight}
+      <div className="background-main-container">
+        <div className="background-container">
+          {player1.iconBackgroundLeft}
+          {player1.iconBackgroundRight}
+        </div>
       </div>
       <div className="game-container">
         <div className="message">{message}</div>

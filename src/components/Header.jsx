@@ -30,9 +30,13 @@ const Header = ({ topicTitle }) => {
 
   const hour = today.getHours() % 12 || 12;
 
+  const minutesNow = today.getMinutes();
+
+  const minutes = minutesNow < 10 ? `0${minutesNow}` : minutesNow;
+
   const date = `${day[today.getDay()]}, ${today.getDate()} ${
     month[today.getMonth()]
-  } ${today.getFullYear()} ${hour}:${today.getMinutes()} ${amPm}`;
+  } ${today.getFullYear()} ${hour}:${minutes} ${amPm}`;
 
   return (
     <div className="header-container">

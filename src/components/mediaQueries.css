@@ -1,0 +1,69 @@
+@media only screen and (max-width: 375px) {
+  .background-main-container {
+    position: absolute;
+    width: 100vw;
+    height: 95vh;
+  }
+
+  .background-container {
+    width: 100vh;
+    height: 100vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -38%) rotate(-69deg);
+  }
+
+  .icon-god-big-left,
+  .icon-devil-big-left,
+  .icon-god-big-right,
+  .icon-devil-big-right {
+    height: 300px;
+    opacity: 0.06;
+  }
+
+  .header-container {
+    padding: 15px 25px;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 35px;
+    align-self: flex-start;
+  }
+
+  .date {
+    font-size: 14px;
+    align-self: flex-end;
+  }
+
+  .game-container {
+    transform: translate(-50%, -42%) scale(1.2);
+  }
+
+  .message {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .credit {
+    font-size: 12px;
+    padding: 18px 25px;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .bottom-container {
+    margin-top: 30px;
+  }
+
+  .button-reset {
+    width: 54%;
+    border: 1.5px solid black;
+  }
+
+  .player-god-devil {
+    width: 20%;
+    border: 1.5px solid black;
+  }
+}

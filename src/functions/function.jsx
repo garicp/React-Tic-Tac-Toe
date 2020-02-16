@@ -29,7 +29,7 @@ const player1Object = {
   iconDarker: <OIcon className="icon darker" />,
   iconBackgroundLeft: <OIcon className="icon-god-big-left" />,
   iconBackgroundRight: <XIcon className="icon-devil-big-right" />,
-  message: "Devil next!",
+  message: "Next... Devil!",
   winningMessage: "Still believe in God!",
   winnerColor: "rgba(0,191,158,.4)",
   loserColor: "rgba(0, 0, 0, .3)"
@@ -44,7 +44,7 @@ const player2Object = {
   iconDarker: <XIcon className="icon darker" />,
   iconBackgroundLeft: <XIcon className="icon-devil-big-left" />,
   iconBackgroundRight: <OIcon className="icon-god-big-right" />,
-  message: "God next!",
+  message: "Next... God!",
   winningMessage: "Devil conquered!",
   winnerColor: "rgba(255,161,172,.7)",
   loserColor: "rgba(0, 0, 0, .3)"
